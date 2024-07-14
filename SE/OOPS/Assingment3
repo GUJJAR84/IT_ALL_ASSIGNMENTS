@@ -1,11 +1,13 @@
+//we are going to use inheritance to do this project
+//Ihertiance is just creating sub classes. there can be many sub classes or a single sub class
 package Assingnemnts;
 
 import java.util.Scanner;
-
+//This is the class in which you are creating diffrent fuction to use in main function
 class Employee {
     String id, mobno, name, address, mail_id;
     double DA, HRA, PF, staff_club_fund, gross, net;
-
+//giving validation
     boolean isMobValid() {
         return mobno.length() == 10;
     }
@@ -52,7 +54,7 @@ class Employee {
     void calculate_net() {
         net = gross - PF;
     }
-
+//to print the salary slip
     void driver(int basic_pay) {
         System.out.println("Name: " + name);
         System.out.println("ID: " + id);
@@ -68,7 +70,7 @@ class Employee {
         System.out.println("Net salary: " + net);
     }
 }
-
+//use of inheritance
 class Programmer extends Employee {
 	int basic_pay;
     void setBasicPay() {
